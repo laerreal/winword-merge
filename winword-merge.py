@@ -2,7 +2,7 @@
 
 DEBUG = 1
 
-WINEPREFIX = "/home/real/wine32"
+WINEPREFIX = None
 unix_vbs = "diff.vbs"
 
 from sys import argv, stderr, stdout
