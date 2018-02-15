@@ -131,12 +131,14 @@ End Sub
 
     # https://stackoverflow.com/questions/2231227/python-subprocess-popen-with-a-modified-environment
     e = environ.copy()
-    e["WINEPREFIX"] = WINEPREFIX
+    if WINEPREFIX is not None:
+        e["WINEPREFIX"] = WINEPREFIX
 
     win_vbs = winpath(unix_vbs)
 
     # https://leereid.wordpress.com/2011/08/03/how-to-run-vbscript/
     """
+    ### XXX: fixme WINEPREFIX
     cscript = Popen(
         [
             "wine",
