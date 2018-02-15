@@ -3,7 +3,8 @@
 The script `winword-merge.py` automates merging MS Word documents which
 are managed by Git. It is designed to be used as a Nautilus (the Ubuntu Linux
 Unity file explorer) script
-(`~/.local/share/nautilus/scripts`) to be applied to a document which is
+(`~/.local/share/nautilus/scripts`). The script is to be applied (through
+popup menu) to a document which is
 _being_ merged. I.e. a `git merge` command was executed and a conflict
 with the document is issued. The script launches MS Word document merging UI
 using a self-generated Visual Basic script (macros). A user must have Wine
