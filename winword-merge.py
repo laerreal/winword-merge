@@ -41,10 +41,32 @@ if __name__ == "__main__":
         el("Too few argumetns")
         exit(1)
 
-    f0_unix = argv[1]
-    f1_unix = f0_unix + ".theirs"
+    f_unix = argv[1]
 
-    theirs_cmd = ["git", "show", ":3:" + f0_unix]
+    f0_unix = "ours." + f_unix
+
+    ours_cmd = ["git", "show", ":2:" + f_unix]
+    if DEBUG < 1:
+        pl(ours_cmd)
+
+    ours_p = Popen(ours_cmd, stdout = PIPE, stderr = PIPE)
+    ours, ours_err = ours_p.communicate()
+
+    if ours_err:
+        el(ours_err.decode("utf-8"))
+
+    if ours_p.returncode:
+        el("Failed to get ours version")
+        exit(1)
+
+    # XXX: this is wrong way for big files
+    ours_f = open(f0_unix, "wb")
+    ours_f.write(ours)
+    ours_f.close()
+
+    f1_unix = "theirs." + f_unix
+
+    theirs_cmd = ["git", "show", ":3:" + f_unix]
     if DEBUG < 1:
         pl(theirs_cmd)
 
