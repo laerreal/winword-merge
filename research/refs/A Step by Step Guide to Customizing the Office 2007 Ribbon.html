@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><link rel="canonical" href="https://technet.microsoft.com/en-us/library/2009.05.ribbon.aspx">
+    <title>A Step by Step Guide to Customizing the Office 2007 Ribbon</title>
+
+
+
+
+
+
+
+<meta name="DCS.dcsuri" content="/en-us/library/dd633481(d=default,l=en-us,v=msdn.10).aspx">
+
+<meta name="NormalizedUrl" content="https://technet.microsoft.com/en-us/library/dd633481(d=default,l=en-us,v=msdn.10).aspx">
+
+<meta name="ms.normalizedurl" content="https://technet.microsoft.com/en-us/library/dd633481(d=default,l=en-us,v=msdn.10).aspx">
+
+<meta name="VotingContextUrl" content="https://technet.microsoft.com/en-us/library/dd633481(d=default,l=en-us,v=msdn.10).aspx">
+
+<meta name="MN" content="9DDD8834-4:02:29 AM">
+
+<meta name="Search.ShortId" content="dd633481">
+
+<meta name="ms.shortidmsdn" content="dd633481">
+
+<meta name="ms.locale" content="en-us">
+
+<meta name="ms.prodver" content="MSDN.10">
+
+<meta name="ms.contentlang" content="EN">
+
+<meta name="ms.lang" content="EN">
+
+<meta name="ms.loc" content="US">
+
+<meta name="ms.sitever" content="2018.02.02.2">
+
+<meta name="ms.assetid" content="9df8346a-a21c-4aef-98d1-cdced1742ee6">
+
+<meta name="ms.auth" content="0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+        
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/ai.js" async=""></script><script type="text/javascript" data-do-not-move="true">
+        //<![CDATA[
+        var AmbientContext = null;
+
+        (function(){
+            var root = (function(){return this;}).call(null);
+
+            var GetCookie = function(name){
+                var cookies = root.document.cookie ? root.document.cookie.split('; ') : [];
+                for (var i = 0; i < cookies.length; i++) {
+                    var pos = cookies[i].indexOf('=');
+                    if (name === root.decodeURIComponent(cookies[i].slice(0, pos)))
+                    {
+                        var cookie = cookies[i].slice(pos + 1).replace(/\+/g, ' ');
+                        cookie = root.decodeURIComponent(cookie);
+                        return cookie;
+                    }
+                }
+            };
+
+            var JsonDeserialize = function(content) {
+                return root.JSON && root.JSON.parse ? root.JSON.parse(content) : (new Function('return (' + content + ')'))();
+            };
+
+            try {
+                AmbientContext = GetCookie('AmbientContext');
+                AmbientContext = AmbientContext && JsonDeserialize(AmbientContext);
+            } catch(ex) {
+            } finally {
+                AmbientContext = AmbientContext || null;
+            }
+        })();
+        //]]>
+    </script>
+
+    <script type="text/javascript" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/jquery-1.js" data-do-not-move="true" data-provides="jQuery"></script>
+    
+<link rel="stylesheet" type="text/css" href="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/mscc-0.css"><link rel="stylesheet" type="text/css" href="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/update.html"><link rel="stylesheet" type="text/css" href="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/Combined.css"><script class="mtps-injected">try {
+/**/
+(window.MTPS || (window.MTPS = {})).cdnDomains || (window.MTPS.cdnDomains = { 
+	"image": "https://i-technet.sec.s-msft.com", 
+	"js": "https://i2-technet.sec.s-msft.com", 
+	"css": "https://i-technet.sec.s-msft.com", 
+	"ttf": "https://i-technet.sec.s-msft.com"
+});
+/**/
+} finally { MTPS._injectNextScript_0 && MTPS._injectNextScript_0(); }</script><script class="mtps-injected">try {
+//
+
+        window.appInsightsId = 'c48d7639-e2ae-45e0-b536-c9b172c95e44';
+        //
+} finally { MTPS._injectNextScript_1 && MTPS._injectNextScript_1(); }</script><script class="mtps-injected" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/Combined.js"></script><link href="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/PrintView.css" rel="stylesheet" type="text/css" media="print"><script type="text/javascript" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/jsll-4.js"></script><script class="mtps-injected" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/mscc-0.js"></script><script class="mtps-injected">try {
+var omnitureTracking = "false";
+} finally { MTPS._injectNextScript_4 && MTPS._injectNextScript_4(); }</script><script class="mtps-injected" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/Combined_003.js"></script><script class="mtps-injected" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/SearchBox.jss"></script><script class="mtps-injected" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/Combined_004.js"></script><script class="mtps-injected">try {
+MTPS = window.MTPS || {}; MTPS.LocalizedStrings = window.MTPS.LocalizedStrings || {}; MTPS.LocalizedStrings.ExpandButtonTooltip = 'Expand'; MTPS.LocalizedStrings.CollapseButtonTooltip = 'Collapse'; MTPS.LocalizedStrings.EnhancedExpandTooltip = 'Click to expand. Double-click to expand all.'; MTPS.LocalizedStrings.EnhancedCollapseTooltip = 'Click to collapse. Double-click to collapse all.'; MTPS.LocalizedStrings.ExpandAllButtonTooltip = 'Expand All'; MTPS.LocalizedStrings.CollapseAllButtonTooltip = 'Collapse All';
+} finally { MTPS._injectNextScript_8 && MTPS._injectNextScript_8(); }</script><script class="mtps-injected" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/Combined_002.js"></script><script async="" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/t.js"></script><script src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/broker.js"></script><script class="mtps-injected">try {
+$(document).ready(function() {
+        try {
+            var token = $("#globalRequestVerification input[name='__RequestVerificationToken']").clone();
+            $("#siteFeedbackForm").append(token);
+        } catch(err) {
+            
+        }
+    });
+} finally { MTPS._injectNextScript_10 && MTPS._injectNextScript_10(); }</script></head>
+<body class="library FF">
+    <div id="page">
+
+        
+
+        
+    
+        
+        
+    <div id="ux-header" dir="ltr" class="ltr " ms.pgarea="header" data-device-type="desktop">
+        
+        
+            
+            
+        <div id="ux-banner">
+            <div id="msccBanner" dir="ltr" data-site-name="technet.microsoft.com" data-mscc-version="0.4.0" data-nver="aspnet-3.0.0" data-sver="0.1.2" class="cc-banner" role="alert"><div class="cc-container"><svg class="cc-icon cc-v-center" x="0px" y="0px" viewBox="0 0 44 44" height="30px" fill="none" stroke="currentColor"><circle cx="22" cy="22" r="20" stroke-width="2"></circle><line x1="22" x2="22" y1="18" y2="33" stroke-width="3"></line><line x1="22" x2="22" y1="12" y2="15" stroke-width="3"></line></svg> <span class="cc-v-center cc-text">This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to this use.</span> <a href="https://go.microsoft.com/fwlink/?linkid=845480" aria-label="Learn more about Microsoft's Cookie Policy" id="msccLearnMore" class="cc-link cc-v-center cc-float-right" data-mscc-ic="false">Learn more</a></div></div>
+        </div>
+
+        <div class="upperBand">
+            <div class="row1">
+                <div class="msLogoAndMegablade">
+                    <a class="msdnLogoImg" href="https://technet.microsoft.com/en-us" title="Technet home" ms.cmpgrp="mslogo">
+                        <div id="msft-logo" class="msft-logo"></div>
+                    </a><div class="GrayPipe"></div><div class="megabladeMenu" ms.cmpgrp="megablade">
+    
+        
+    
+    <div id="megabladeContainer" class="ltr">
+        <div id="megabladeContainerCenter">
+            <div id="megabladeMainMenu" tabindex="0" role="button" aria-label="technet" aria-expanded="false">TechNet</div>
+            <ul id="megabladeItems">
+                        <li data-value="hh326172" class="bladeItem bladeItemWithMenu">
+                            <a href="" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Products</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Products</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/windows">Windows</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/library/bb625087.aspx">Windows Server</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/library/cc507089.aspx">System Center</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/microsoft-edge">Microsoft Edge</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/office">Office</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/en-us/office/dn788774">Office 365</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/en-us/office/dn788775">Exchange Server</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="https://msdn.microsoft.com/library/mt590198(v=sql.1)">SQL Server</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/office/dn788776">SharePoint Products</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/office/dn788773">Skype for Business</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/bb421517.aspx?wt.svl=more_centers_link">See all products »</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="hh880860" class="bladeItem bladeItemWithMenu">
+                            <a href="" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">IT Resources</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Resources</h5>
+  <ul>
+    <li>
+      <a href="https://channel9.msdn.com/">Channel 9 Video</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/evalcenter/">Evaluation Center</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/bb291022">Learning Resources</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/dn440144">Microsoft Tech Companion App</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/dn550853" title="Microsoft Technical Communities">Microsoft Technical Communities</a>
+    </li>
+    <li>
+      <a href="https://mva.microsoft.com/?CR_CC=200157774">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/scriptcenter">Script Center</a>
+    </li>
+    <li>
+      <a href="https://blogs.technet.microsoft.com/serverandtools/">Server and Tools Blogs</a>
+    </li>
+    <li>
+      <a href="https://blogs.technet.microsoft.com/">TechNet Blogs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayout">
+  <h5>&nbsp;</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/cc543196">TechNet Flash Newsletter</a>
+    </li>
+    <li>
+      <a href="https://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/library/default.aspx">TechNet Library</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/magazine/default.aspx">TechNet Magazine</a>
+    </li>
+    <li>
+      <a href="https://social.technet.microsoft.com/wiki">TechNet Wiki</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/virtuallabs">Virtual Labs</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Solutions</h5>
+  <ul>
+    <li>
+      <a href="https://technet.microsoft.com/network">Networking</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/cloud/private-cloud">Cloud and Datacenter</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/security">Security</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/server-cloud/solutions/virtualization.aspx">Virtualization</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="hh371326" class="bladeItem bladeItemWithMenu">
+                            <a href="" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Downloads</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Updates</h5>
+  <ul>
+    <li>
+      <a href="https://support.microsoft.com/en-us">Service Packs</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/security/bulletin">Security Bulletins</a>
+    </li>
+    <li>
+      <a href="https://support.microsoft.com/en-us/help/12373/windows-update-faq">Windows Update</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Trials</h5>
+  <ul>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-technical-preview">Windows Server 2016</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-technical-preview">System Center 2016</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-10-enterprise">Windows 10 Enterprise</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016">SQL Server 2016</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/" title="See all trials">See all trials »</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Related Sites</h5>
+  <ul>
+    <li>
+      <a href="https://www.microsoft.com/en-us/download">Microsoft Download Center</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/evalcenter/">Microsoft Evaluation Center</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/download/driver.aspx?q=driver">Drivers</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/sysinternals">Windows Sysinternals</a>
+    </li>
+    <li>
+      <a href="https://gallery.technet.microsoft.com/">TechNet Gallery</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="jj837158" class="bladeItem bladeItemWithMenu">
+                            <a href="" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Training</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Training</h5>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/handsonlabs">Expert-led, virtual classes</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/training.aspx">Training Catalog</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/find-partner.aspx">Class Locator</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://mva.microsoft.com/">Microsoft Virtual Academy</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://mva.microsoft.com/en-US/training-courses/windows-server-2012-training-technical-overview-8564?l=BpPnn410_6504984382">Free Windows Server 2012 courses</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://mva.microsoft.com/product-training/windows?CR_CC=200155697#!lang=1033" title="Free Windows 8 courses">Free Windows 8 courses</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/sql-training.aspx">SQL Server training</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/on-demand-online-courses.aspx">Microsoft Official Courses On-Demand</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Certifications</h5>
+  <ul>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/certification-overview.aspx">Certification overview</a>
+    </li>
+    <li>
+      <a onclick="window.open(this.href);return false;" onkeypress="window.open(this.href);return false;" href="https://www.microsoft.com/en-us/learning/offers.aspx?intcmp=lexhpoffersmenubutton">Special offers</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-cloud-platform-infrastructure.aspx" title="MCSE Cloud Platform and Infrastructure">MCSE Cloud Platform and Infrastructure</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-mobility-certification.aspx">MCSE: Mobility</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-data-management-analytics.aspx">MCSE: Data Management and Analytics</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/mcse-productivity-certification.aspx">MCSE Productivity</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Other resources</h5>
+  <ul>
+    <li>
+      <a target="_blank" href="https://events.microsoft.com/">Microsoft Events</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.microsoft.com/en-us/learning/offers.aspx">Exam Replay</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://borntolearn.mslearn.net/b/?Redirected=true">Born To Learn blog</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.technicalcommunity.com/default.aspx">Find technical communities in your area</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://azure.microsoft.com/en-us/training/">Azure training</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.mindhub.com/category-s/437.htm">Official Practice Tests</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+                        <li data-value="hh371327" class="bladeItem bladeItemWithMenu">
+                            <a href="" onclick="return false;" role="button" aria-expanded="false" data-mscc-ic="false">Support</a><span class="caret"></span>
+                            <div class="navpage"><div class="menuContainerLayout">
+  <h5>Support options</h5>
+  <ul>
+    <li>
+      <a href="https://support.microsoft.com/gp/contactus81?Audience=Commercial">For business</a>
+    </li>
+    <li>
+      <a href="https://msdn.microsoft.com/hh361695">For developers</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/ms772425">For IT professionals</a>
+    </li>
+    <li>
+      <a href="https://support.microsoft.com/en-us/assistedsupportproducts">For technical support</a>
+    </li>
+    <li>
+      <a href="https://www.microsoft.com/en-us/microsoftservices/support.aspx">Support offerings</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>More support</h5>
+  <ul>
+    <li>
+      <a href="https://premier.microsoft.com/">Microsoft Premier Online</a>
+    </li>
+    <li>
+      <a href="https://social.technet.microsoft.com/forums/">TechNet Forums</a>
+    </li>
+    <li>
+      <a href="https://social.msdn.microsoft.com/forums/">MSDN Forums</a>
+    </li>
+    <li>
+      <a href="https://technet.microsoft.com/security/bulletin">Security Bulletins &amp; Advisories</a>
+    </li>
+  </ul>
+</div><div class="menuContainerLayoutSplashGuard"></div><div class="menuContainerLayout">
+  <h5>Not an IT pro?</h5>
+  <ul>
+    <li>
+      <a href="https://support.microsoft.com/">Microsoft Customer Support</a>
+    </li>
+    <li>
+      <a href="https://answers.microsoft.com/en-us">Microsoft Community Forums</a>
+    </li>
+  </ul>
+</div></div>
+                        </li>
+            </ul>
+        </div>
+    </div>
+    
+
+</div>
+                </div>
+
+                <div class="controls" ms.cmpgrp="aux nav">
+                    <div id="setting-menu">
+                        <div class="mobile-setting-icon"></div>
+                    </div>
+                    <div class="controlsInternal">
+                        
+    <form class="selectLocale" id="selectLocaleForm" action="https://technet.microsoft.com/en-us/SelectLocale">
+        <input name="fromPage" value="https%3a%2f%2ftechnet.microsoft.com%2fen-us%2flibrary%2f2009.05.ribbon.aspx" type="hidden">
+        <a href="#" onclick="$('#selectLocaleForm').submit();return false;" title="Change your language">United States (English)</a>
+    </form>
+
+
+                        <a class="scarabLink" href="https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=13&amp;ct=1518436949&amp;rver=6.7.6640.0&amp;wp=mcmbi&amp;wlcxt=technet%24technet%24technet&amp;wreply=https%3a%2f%2ftechnet.microsoft.com%2fen-us%2flibrary%2f2009.05.ribbon.aspx&amp;lc=1033&amp;id=254354&amp;mkt=en-us">Sign in</a>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="row2">
+                <div id="gripAndBrandLogo">
+                    <div id="grip-menu">
+                        <div id="grip" class="menu-icon"></div>
+                    </div>
+                    <div class="brandLogo" ms.cmpgrp="brandlogo">
+                        <a href="https://technet.microsoft.com/" title="Microsoft TechNet"><img alt="Microsoft TechNet" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/BrandLogoTechNetNew.png"></a>
+                    </div>
+                </div>
+                <div id="drawer">
+
+                </div>
+                <div id="search-menu">
+                    <div class="mobile-search-icon"></div>
+                </div>
+                
+
+    <div class="SearchBox" ms.cmpgrp="aux nav" role="search">
+        <form id="HeaderSearchForm" name="HeaderSearchForm" method="get" onsubmit="return Epx.Controls.SearchBox.searchBoxOnSubmit(this);"><p role="alert" style="height: 1px;width: 1px;overflow: hidden;position: absolute;"></p>
+            <input id="HeaderSearchTextBox" name="query" maxlength="200" onfocus="Epx.Controls.SearchBox.watermarkFocus(event, this.title)" onblur="Epx.Controls.SearchBox.watermarkBlur(event, this.title)" aria-labelledby="HeaderSearchButton" autocomplete="off" data-searchtype="searchbox" role="combobox" aria-label="Search Input Box" aria-autocomplete="both" aria-owns="MSDNSearchAutoCompleteList" aria-live="polite" placeholder="Search TechNet with Bing" title="Search TechNet with Bing" type="text">
+            <button id="HeaderSearchButton" value="" type="submit" class="header-search-button" ms.title="search" data-searchtype="icon" title="Search TechNet with Bing"></button>
+        <div id="SearchFlyoutContainer" style="display: none; text-align: left; border: 1px solid buttonshadow; position: absolute; z-index: 1000; padding: 2px; background-color: rgb(255, 255, 255); color: rgb(112, 112, 112); font-family: &quot;Segoe UI&quot;, &quot;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; font-size: 14px;"><div id="SuggestionContainer"><ul style="list-style: outside none none; padding: 4px 2px 0px 1px; cursor: pointer; margin: 1px; white-space: nowrap;" data-searchtype="search dropdown" id="MSDNSearchAutoCompleteList" role="listbox" aria-controls="HeaderSearchTextBox"></ul></div></div></form>
+
+        
+        
+
+    </div>
+
+                <div class="clear"></div>
+             </div>
+
+            <div class="row3">
+
+            </div>
+        </div>
+        <div class="lowerBand">
+            <div class="ux-nav" role="navigation" aria-label="header toc" ms.cmpgrp="main nav">
+                <div class="TocNavigation">
+   
+   <div class="toclevel1">
+          <a class="normal" href="https://technet.microsoft.com/" title="Home">Home</a>
+          <a class="active" href="https://technet.microsoft.com/library/" title="Library">Library</a>
+          <a class="normal" href="https://social.technet.microsoft.com/wiki" title="Wiki">Wiki</a>
+          <a class="normal" href="" title="Learn">Learn</a>
+          <a class="normal" href="https://gallery.technet.microsoft.com/" title="Gallery">Gallery</a>
+          <a class="normal" href="" title="Downloads">Downloads</a>
+          <a class="normal" href="" title="Support">Support</a>
+          <a class="normal" href="https://social.technet.microsoft.com/forums/en-us/home" title="Forums">Forums</a>
+          <a class="normal" href="https://blogs.technet.microsoft.com/" title="Blogs">Blogs</a>
+
+    </div>
+  
+</div>
+            </div>
+        </div>
+    </div>
+
+<div id="jumpInfo" style="display: none">We’re sorry. The content you requested has been removed. You’ll be auto redirected in 1 second.</div>
+
+
+
+
+<link type="text/css" rel="stylesheet">
+<link type="text/css" rel="stylesheet">
+
+
+    <div id="breadcrumbs" ms.pgarea="body" ms.cmpgrp="breadcrumbs">
+        <div id="breadcrumbDesktop" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://technet.microsoft.com/en-us/library/ee721042.aspx" title="TechNet Magazine"></a></span>
+                        <span><a href="https://technet.microsoft.com/en-us/library/bb978517.aspx" title="Issues"><span>Issues</span></a></span>
+                        <span><a href="https://technet.microsoft.com/en-us/library/dd353269.aspx" title="TechNet Magazine 2009"><span>TechNet Magazine 2009</span></a></span>
+                        <span class="breadcrumbDropSmall">
+                            <a id="breadcrumbDropDownButton" href="#" targethref="https://technet.microsoft.com/en-us/library/dd353269.aspx" title="May 2009" role="button" aria-expanded="false"><span>May 2009</span></a>
+                        </span>
+        </div>
+        <div id="breadcrumbDropDownMenu" style="display: none;"></div>
+
+        <div id="breadcrumbTablet" class="breadCrumb">
+                        <span class="breadcrumbEllipsis"><a href="https://technet.microsoft.com/en-us/library/dd353269.aspx" title="TechNet Magazine 2009"></a></span>
+                    <span><a href="https://technet.microsoft.com/en-us/library/dd637737.aspx" title="May 2009"><span>May 2009</span></a></span>
+                <span class="breadcrumbDropSmall"><a id="tocDropDownButton" href="#" title="A Step by Step Guide to Customizing the Office 2007 Ribbon" role="button" aria-expanded="false"><span>A Step by Step Guide to Customizing the Office 2007 Ribbon</span></a></span>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://technet.microsoft.com/en-us/library/2009.05.ribbon(d=printer).aspx" rel="nofollow"><ins class="print"></ins>Print </a>
+            <a id="isd_printABook" href="https://technet.microsoft.com/en-us/library/export/help/?returnurl=%2fen-us%2flibrary%2f2009.05.ribbon.aspx">
+                <ins class="export"></ins>Export (<span class="count">0</span>)
+            </a>
+        </div></div>
+        <div id="tocDropDownMenu" style="display: none;"></div>
+        <div id="breadcrumbMobile" class="breadCrumb">
+                <span class="breadcrumbEllipsis"><a href="https://technet.microsoft.com/en-us/library/dd637737.aspx" title="May 2009"></a></span>
+            <span class="breadcrumbDropSmall"><a id="tocPopupButton" href="#" title="A Step by Step Guide to Customizing the Office 2007 Ribbon" role="button" aria-expanded="false"><span>A Step by Step Guide to Customizing the Office 2007 Ribbon</span></a></span>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://technet.microsoft.com/en-us/library/2009.05.ribbon(d=printer).aspx" rel="nofollow"><ins class="print"></ins>Print </a>
+            <a id="isd_printABook" href="https://technet.microsoft.com/en-us/library/export/help/?returnurl=%2fen-us%2flibrary%2f2009.05.ribbon.aspx">
+                <ins class="export"></ins>Export (<span class="count">0</span>)
+            </a>
+        </div></div>
+    </div>
+    <div id="tocPopupMenu" style="display: none;">
+        <div id="tocPopMenuClose" class="tocCloseLarge" role="button" aria-label="Close Popup Menu" tabindex="0"></div>
+        <div id="tocTitle">A Step by Step Guide to Customizing the Office 2007 Ribbon</div>        
+    </div>
+
+    
+
+
+        <div id="body" ms.pgarea="body" class="">
+            <span id="tabletView_large"></span>
+            <span id="tabletView_small"></span>
+            <span id="mobileView"></span>
+            
+
+
+
+
+    <div id="leftNav" ms.cmpgrp="left toc" role="navigation" aria-label="left toc" style="height: 1250px;">
+
+    
+
+
+<div id="tocnav" class="ArchiveV2" style="width: 255px; position: fixed; top: -482px;">
+    <div class="tocunselected">
+        <div id="tocExpandArea" style="display: block;">
+            <span class="toc_empty"></span>
+            <span id="tocExpandButton"><a href="javascript:void(0)" aria-label="expand sibling toc" role="button"></a></span>
+        </div>
+        <div id="tocExpand"><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.win7.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="An Introduction to Security in Windows 7">An Introduction to Security in Windows 7</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.pki.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="PKI Enhancements in Windows 7 and Windows Server 2008 R2">PKI Enhancements in Windows 7 and Windows Server 2008 R2</a>                </div></div>
+    <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.sql.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Common SQL Server Security Issues and Solutions">Common SQL Server Security Issues and Solutions</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.fsocs.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Protect IM in your OCS 2007 Environment with Forefront Security">Protect IM in your OCS 2007 Environment with Forefront Security</a>                </div><div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.fsexch.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Protect E-Mail in your Exchange 2007 Environment with Forefront Security">Protect E-Mail in your Exchange 2007 Environment with Forefront Security</a>                </div></div>
+    <div class="tocselected"><div class="toclevel current" data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.ribbon.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="A Step by Step Guide to Customizing the Office 2007 Ribbon">A Step by Step Guide to Customizing the Office 2007 Ribbon</a>                </div><div class="tocPadding"></div></div>
+    <div class="tocunselected">
+                
+                
+                
+                
+                
+                
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.excel.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Microsoft Excel: Using Excel and Visual Basic for Applications to Create a Game">Microsoft Excel: Using Excel and Visual Basic for Applications to Create a Game</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.ednote.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="From the Editor: The Perennial Issue">From the Editor: The Perennial Issue</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.toolbox.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Toolbox: Admin Script Editor, Windows PowerShell Scripting Guide, Quest Discovery Wizard for SQL Server">Toolbox: Admin Script Editor, Windows PowerShell Scripting Guide, Quest Discovery Wizard for SQL Server</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.exchangeqa.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Exchange Q&amp;A: Recovering a CMS, Failover with two versions of Outlook, Offline Address Book issue">Exchange Q&amp;A: Recovering a CMS, Failover with two versions of Outlook, Offline Address Book issue</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.utility.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Free Utility: Delete Inactive User Profiles">Free Utility: Delete Inactive User Profiles</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.sharepoint.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Extend WSS 3.0 to protect Office documents with IRM and AD RMS">Extend WSS 3.0 to protect Office documents with IRM and AD RMS</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.powershell.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Automating User Provisioning with a Windows PowerShell Function, Part 3">Automating User Provisioning with a Windows PowerShell Function, Part 3</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.goat.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Control Network Access Using DHCP Enforcement in NAP">Control Network Access Using DHCP Enforcement in NAP</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.scriptingguys.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Working with Access Databases in Windows PowerShell">Working with Access Databases in Windows PowerShell</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.desktop.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Enhanced Virtualization and more in the Microsoft Desktop Optimization Pack">Enhanced Virtualization and more in the Microsoft Desktop Optimization Pack</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.field.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="IT Does Matter">IT Does Matter</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.cableguy.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Cable Guy: DirectAccess and the Thin Edge Network">Cable Guy: DirectAccess and the Thin Edge Network</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.busit.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Business of IT: Reinventing IT in Difficult Times">Business of IT: Reinventing IT in Difficult Times</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.busit2.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Business of IT: Lowering the Cost of IT">Business of IT: Lowering the Cost of IT</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.utility2.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Utility Spotlight: Faster CPU Utilization Reports Using Multithreading">Utility Spotlight: Faster CPU Utilization Reports Using Multithreading</a>                </div>
+                <div class="toclevel " data-toclevel="1">
+<span class="toc_empty"></span><a href="https://technet.microsoft.com/en-us/library/2009.05.wincon.aspx" mtpsaliasid="" mtpsassetid="" mtpsshortid="" title="Windows Confidential: Finding the Right Volume">Windows Confidential: Finding the Right Volume</a>                </div>
+    </div>
+    <a id="tocMenuToggler" href="javascript:void(0)" role="button">
+        <span id="tocMenuTogglerIcon" class="tocMenuCollapse" role="button" aria-expanded="true" aria-label="Table of contents menu"></span>
+        <div id="tocMenuTogglerLabel">TOC</div>
+    </a>
+</div>            <div style="display:none">
+                <div id="CollapseLocalizeString">Collapse the table of content</div>
+                <div id="ExpandLocalizeString">Expand the table of content</div>
+            </div>
+        <div>
+            <a id="isd_archiveControlResponsive" style="display:none;" href="javascript:void(0)" role="button" aria-label="Hide Archived Versions" data-include-archive="Show Archived Versions" data-exclude-archive="Hide Archived Versions">
+            </a>
+            <div id="isd_archiveInstrument" style="display:none">This documentation is archived and is not being maintained.</div>
+        </div>
+    </div>
+     <div id="content" class="content" ms.cmpgrp="content body" role="main">
+
+
+
+
+
+
+
+
+    
+    <div id="archiveDisclaimerText" style="display:none">This documentation is archived and is not being maintained.</div>
+
+
+
+<div class="navpage" xmlns="http://www.w3.org/1999/xhtml">
+  <div>
+    <div>
+      <div class="topic">
+        <div class="FeatureSmallHead">Microsoft Office</div>
+        <div class="FeatureHeadline">A Guide to Customizing the Office 2007 Ribbon</div>
+        <div class="FeatureByLine">Stephanie Krieger</div>
+        <div class="FeatureAtAGlance">At a Glance:</div>
+        <ul>
+          <li class="ListingBullet">Architecture of an Office Open XML file</li>
+          <li class="ListingBullet">Steps to creating a custom Ribbon tab</li>
+          <li class="ListingBullet">Adding VBA macros to the Ribbon</li>
+        </ul>
+        <div>
+          <div>
+            
+            <h2 class="LW_CollapsibleArea_TitleDiv">
+              <div>
+                <a class="LW_CollapsibleArea_TitleAhref" title="" role="heading">
+                  <span class="cl_CollapsibleArea_expanding LW_CollapsibleArea_Img"></span>
+                  <span class="LW_CollapsibleArea_Title">Contents</span>
+                </a>
+                <div id="Anchor_0" class="LW_CollapsibleArea_Anchor_Div">
+                  <a href="https://technet.microsoft.com/en-us/library/2009.05.ribbon.aspx#Anchor_0" class="LW_CollapsibleArea_Anchor_Img" title="Right-click to copy and share the link for this section"></a>
+                </div>
+                <div class="LW_CollapsibleArea_HrDiv">
+                  <hr class="LW_CollapsibleArea_Hr">
+                </div>
+              </div>
+            </h2>
+            <div class="sectionblock">
+              <a href="#id0980010" xmlns:ms="urn:schemas-microsoft-com:xslt">What's involved in creating a customized Ribbon?</a>
+              <br>
+              <a href="#id0980017" xmlns:ms="urn:schemas-microsoft-com:xslt">What tools do you need to get started?</a>
+              <br>
+              <a href="#id0980025" xmlns:ms="urn:schemas-microsoft-com:xslt">Create a custom Ribbon tab</a>
+              <br>
+              <a href="#id0980068" xmlns:ms="urn:schemas-microsoft-com:xslt">Adding the customUI File to the ZIP Package</a>
+              <br>
+              <a href="#id0980079" xmlns:ms="urn:schemas-microsoft-com:xslt">Adding VBA Macros to the Ribbon</a>
+              <br>
+              <a href="#id0980105" xmlns:ms="urn:schemas-microsoft-com:xslt">Getting Creative</a>
+              <br>
+              <a href="#id0980143" xmlns:ms="urn:schemas-microsoft-com:xslt">Sharing your customizations</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <div id="id0980001" class="ArticleNormalPara">Whether you manage
+ a 2007 Microsoft Office system environment, you're a Microsoft Office 
+power user who likes to customize the environment, or you write Visual 
+Basic for Applications (VBA) macros, you'll want to see just how easy it
+ can be to customize the Ribbon for 2007 Office system documents, 
+templates, and add-ins. And all you need is Windows Notepad. In this 
+article, I'm going to show you how.</div>
+        <div id="id0980002" class="ArticleNormalPara">In order to jump 
+right into creating a custom UI, I am making certain assumptions about 
+your familiarity with the Office Open XML Formats and with VBA. You 
+probably already know that an Office Open XML document is a ZIP package 
+comprised of XML files (known as document parts), other files (such as 
+any media files included in the document), and a handful of folders to 
+organize all these elements. And you've probably seen Office Open XML 
+markup or something similar (even if you've never actually written it). 
+So, you already know that Office Open XML is written in fairly plain 
+language—that is, you don't have to be a developer to get it. Note that I
+ will also discuss VBA in this article because you will probably want to
+ add your own macros (and not just built-in commands) to your custom 
+Ribbon. </div>
+        <div id="id0980003" class="ArticleNormalPara">If you are not yet
+ familiar with Office Open XML documents, take a look at the structure 
+before you begin customizing the Ribbon:</div>
+        <div id="id0980004" class="ArticleNormalPara">
+          <ol>
+            <li>Create a simple Office Word 2007 document, save the file and close it.</li>
+            <li>Change the file extension for your new document to .zip.</li>
+            <li>Open that ZIP package and take a look around. When you first open the package, it should look pretty much like Figure 1.</li>
+            <li>Open the _rels folder and you'll see a file named .rels.
+ This defines the relationships between the top-level document 
+components that you see here. I'll be editing the .rels file later in 
+this article.</li>
+            <li>Now open the word folder; you'll see that it contains 
+such items as document.xml (that's the main document body), styles.xml, 
+and other parts that are probably familiar. </li>
+          </ol>
+        </div>
+        <div class="ArticleImageSpacer">
+          <img id="fig 01" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/IC320727.gif" xmlns="">
+          <div class="ArticleImageCaptionText">Figure 1 <strong>The Structure of an Office Open XML Document</strong></div>
+        </div>
+        <div id="id0980009" class="ArticleNormalPara">You might also see
+ some additional files and folder names depending on the content in your
+ file. For example, you'll see a media folder if your document contains 
+pictures, sound files, or other media.</div>
+        <br>
+        <div id="id0980010" class="ArticleTypeTitle">What's involved in creating a customized Ribbon?</div>
+        <div id="id0980011" class="ArticleNormalPara">You can make this 
+much more complicated than what I'm about to discuss. But I'm a big fan 
+of using the simplest solution for any task. To add customization to the
+ Ribbon in a 2007 Office system Word, Excel, or PowerPoint file, all you
+ need to do is the following:</div>
+        <div id="id0980012" class="ArticleNormalPara">
+          <ol>
+            <li>Create a file named customUI.xml and add the markup to that file for your customization. </li>
+            <li>Create a file folder named customUI, place your 
+customUI.xml file there, and then drop the folder into the top-level of 
+your document's ZIP package.</li>
+            <li>Open the file named .rels and add one line of markup to it to tell the document about your customized Ribbon.</li>
+            <li>Open the document and bask in the beauty of your creation.</li>
+          </ol>
+        </div>
+        <div id="id0980016" class="ArticleNormalPara">That's all there is to it and I'll show you how to do all of it by the end of this article.</div>
+        <br>
+        <div id="id0980017" class="ArticleTypeTitle">What tools do you need to get started?</div>
+        <div id="id0980018" class="ArticleNormalPara">You can write your customUI.xml file using Windows Notepad. </div>
+        <div id="id0980019" class="ArticleNormalPara">There are also two downloads you should grab from the Microsoft Web site for reference: The first is the "<a href="http://go.microsoft.com/fwlink/?LinkId=146597">2007 Office System Document: Lists of Control IDs</a>",
+ which contains the Ribbon control ID workbooks for all built-in 
+commands in the Ribbon-enabled 2007 Office system programs. The second 
+download is the "<a href="http://go.microsoft.com/fwlink/?LinkId=146598">2007 Office System Add-In: Icons Gallery</a>", which is a macro-driven workbook that contains the IDs for all of the Office 2007 built-in Ribbon icons. </div>
+        <div id="id0980020" class="ArticleNormalPara">After you've 
+edited the contents of the package, you need to change the file 
+extension back from .zip to its original extension. But you don't have 
+to keep changing the extension to .zip each time you want to edit the 
+underlying package. Instead, you can use a utility that will recognize 
+your Office Open XML Format document as a ZIP package without ever 
+changing the extension in the first place. There are at least a few of 
+these. One open source option that I like is <a href="http://www.7-zip.org/">7-zip</a>.
+ After you install it, just right-click your Office Open XML Format 
+document, point to 7-zip, and then click Open Archive. You can even edit
+ XML document parts directly in the package, and the archive utility 
+will prompt you to update the package after you save your changes. </div>
+        <div id="id0980021" class="ArticleNormalPara">Before you begin, 
+there is one more thing you might want to do. There's a setting in the 
+Office applications that you can enable to prompt you if you open a file
+ containing UI errors. Sometimes an error prevents the custom Ribbon 
+from displaying, but not always, so it's helpful to get a warning right 
+away. The error message you see tells you where the error is located, 
+which can also be a timesaver. You can enable this setting in Word, 
+Excel, or PowerPoint (or even Access) and it will apply to all.</div>
+        <div id="id0980022" class="ArticleNormalPara">
+          <ol>
+            <li>In Word, Excel, or PowerPoint, click the Microsoft 
+Office button and then, at the bottom of the menu, click &lt;Program&gt;
+ Options.</li>
+            <li>On the Advanced tab, scroll to the bottom to find the 
+General settings. Check the box labeled Show add-in user interface 
+errors, and then click OK.</li>
+          </ol>
+        </div>
+        <div id="id0980024" class="ArticleNormalPara">Now go ahead and 
+open Notepad to follow along with this article. Notepad is all you'll 
+need to follow along with the rest of this article. But, if you happen 
+to have Microsoft Visual Studio 2008 handy, don't be afraid to use that.
+ You don't have to write any managed code (or even know what managed 
+code is) to get some pretty cool benefits from using that software to 
+edit Office Open XML document parts. I use Visual Studio 2008 because 
+Visual Studio knows the customUI schema, so it provides IntelliSense 
+menus and automatic syntax checking. This can save a lot of time, and 
+the IntelliSense menus are handy when you're learning the terminology. </div>
+        <br>
+        <div id="id0980025" class="ArticleTypeTitle">Create a custom Ribbon tab</div>
+        <div id="id0980026" class="ArticleNormalPara">The Ribbon in each
+ applicable 2007 Office system application contains several tabs, each 
+tab contains several groups, and each group may display several 
+commands. Many types of controls are used to display commands, including
+ buttons, galleries, split-buttons, menus, and others. </div>
+        <div id="id0980027" class="ArticleNormalPara">You can customize 
+any built-in tab (as well as the Microsoft Office Button menu), create 
+your own custom tabs, or even start your own completely custom Ribbon 
+from scratch. Of course, I can't explore every possible type of Ribbon 
+customization in one article, but I will show you quite a lot of the 
+things you can do.</div>
+        <div id="id0980028" class="ArticleNormalPara">I'll start by 
+creating a simple custom tab for Word that displays a few controls that 
+run built-in commands. In this scenario, I need to create a document 
+template for users and want to start the custom Ribbon with a group of 
+commands that I know the users will frequently need. Of course, I could 
+put them on the Quick Access Toolbar for the template without writing 
+any XML, but I want these commands to be as large as any on the Ribbon 
+and side-by-side with some other custom commands that I'll add to the 
+tab in a bit. <strong>Figure 2</strong> shows what the new custom group will look like. Here's the customUI.xml markup I used to create it:</div>
+<div id="code-snippet-1" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_8d614fb4-265f-41fc-88d6-d6e958ab9272');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_8d614fb4-265f-41fc-88d6-d6e958ab9272" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;customUI xmlns="http://schemas.microsoft.com/
+office/2006/01/customui"&gt;
+&lt;Ribbon&gt;
+&lt;tabs&gt;
+&lt;tab id="customTab" label="My Custom Tab"&gt;
+&lt;group id="customGroup1" 
+label="Helpful Tools"&gt;
+  &lt;gallery idMso="QuickStylesGallery"
+  visible="true" size="large" /&gt;
+  &lt;button idMso="PasteSpecialDialog"
+  visible="true" size="large" 
+  imageMso="Paste"/&gt;
+  &lt;button idMso="CrossReferenceInsert"
+  visible="true" size="large" label="Insert a
+  Cross-Reference" /&gt;
+&lt;/group&gt;
+&lt;/tab&gt;
+&lt;/tabs&gt;
+&lt;/Ribbon&gt;
+&lt;/customUI&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div class="ArticleImageSpacer"><img id="fig 03" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/IC320728.gif" xmlns=""><div class="ArticleImageCaptionText">Figure 2 <strong>A Simple Custom Tab</strong></div></div><div id="id0980050" class="ArticleNormalPara">Let's take a look at the XML structure in this markup.</div><div id="id0980051" class="ArticleNormalPara"><ol><li>If
+ you open any Office Open XML document part, you'll see the same first 
+line shown here (see the red markup). It's an indicator of the format 
+being used. Just type it as you see it here. That second line is the tag
+ that defines what type of data is being provided here. That's the 
+customUI tag, and the underlined attribute (xmlns) is a namespace 
+definition that indicates the schema being used. Again, just type it 
+exactly as you see it.</li><li>Notice that many of the tags shown here 
+are paired (see the blue markup). You have the start tags near the top: 
+customUI, followed by ribbon, followed by tabs (referring to the set of 
+all tabs on the Ribbon), tab (referring to the individual tab you're 
+working on), and group (the group you are creating). Then, beneath the 
+data for the commands in the new group, you see the end tags in reverse 
+order for each. The paired tags are nested inside one another. Note that
+ each tag is enclosed in angled brackets, the end tag for each pair of 
+tags begins with a slash after the open bracket, and each attribute is 
+followed immediately by an equal sign and then its value inside 
+quotation marks. A small syntax error, such as a missing slash, can keep
+ your UI customization from being displayed.</li><li>The commands in 
+this custom group are each inside a standalone tag (see the green 
+markup). They don't require end tags because all the data you need for 
+the command is in this tag—there are no additional tags nested inside of
+ them. So, the slash that indicates the end of the data for the tag 
+comes at the end of each of these tags. Keep in mind, however, that not 
+all Ribbon controls are standalone tags. For instance, if I create a 
+custom gallery to which I add other controls, that would require a 
+paired tag in order to nest other tags. Similarly, a custom menu control
+ is a paired tag inside of which you can add buttons and other controls.
+ </li></ol></div><div id="id0980054" class="ArticleNormalPara">Okay, let's look a bit closer. Every element you add to the structure of your custom UI needs a way to be uniquely identified:</div>
+<div id="code-snippet-2" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_1f8c3163-282a-4f90-8c99-4e82ad60d289');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_1f8c3163-282a-4f90-8c99-4e82ad60d289" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;tab id="customTab" label="My Custom Tab"&gt;
+&lt;group id="customGroup1" label="Helpful Tools"&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980057" class="ArticleNormalPara">Notice that the tag for my
+ custom tab and the tag for the group I created each have an id 
+attribute. You can name it just about whatever you like (but no spaces, 
+please) as long as it's unique within the file. The only other attribute
+ I customized for each of these tags was its label. </div><div id="id0980058" class="ArticleNormalPara">Because
+ the three commands on this custom tab are built-in Office 2007 
+commands, I needed to use the idMso attribute as identifiers, rather 
+than id:</div>
+<div id="code-snippet-3" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_fa5285bf-8928-4444-a0d0-82611e6c2e06');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_fa5285bf-8928-4444-a0d0-82611e6c2e06" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;gallery idMso="QuickStylesGallery" visible="true" size="large" /&gt;
+&lt;button idMso="PasteSpecialDialog" visible="true" size="large" imageMso="Paste" /&gt;
+&lt;button idMso="CrossReferenceInsert" visible="true" size="large" label="Insert a Cross-Reference" /&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980062" class="ArticleNormalPara">I found these control IDs 
+in the Word Ribbon Controls workbook. There are a few things worth 
+noting about these tags and their attributes. </div><div id="id0980063" class="ArticleNormalPara">The
+ first command is a gallery, the other two are buttons. I know this 
+because I've used the features, but you can also find this information 
+in the Ribbon control workbooks for each program (the command type is 
+listed right next to its ID). </div><div id="id0980064" class="ArticleNormalPara">The
+ visible attribute is true by default, so technically you don't have to 
+add it, but it's a good idea. You may want to control visibility of 
+commands at some point. </div><div id="id0980065" class="ArticleNormalPara">The
+ size command, on the other hand, defaults to "normal" (which looks, for
+ example, like the Cut, Copy, or Format Painter commands on the Home tab
+ in Word, Excel, and PowerPoint). If you want the commands to appear 
+large, you have to add this attribute.</div><div id="id0980066" class="ArticleNormalPara">If
+ you take a look at the Paste Special command in one of the 2007 Office 
+system programs, you'll see that it's a normal size command by default. 
+Some commands displayed this way have icons that still look correct when
+ displayed larger, but this isn't one of those. If you leave the custom 
+icon for this control, it will look fuzzy. So, I added the image for the
+ Paste command that you see on the Paste split button on the Home tab. 
+That's the imageMso attribute that you see in the button tag for the 
+Paste Special command.</div><div id="id0980067" class="ArticleNormalPara">I
+ also chose to adjust the label for Cross-Reference a bit, as you see in
+ the button tag for that control. By default, it's just Cross-reference,
+ but I wanted to add a bit more information since it doesn't appear on a
+ tab that provides context.</div><br><div id="id0980068" class="ArticleTypeTitle">Adding the customUI File to the ZIP Package</div><div id="id0980069" class="ArticleNormalPara">Now
+ is the time, if you haven't already, to create a folder named customUI 
+and place the customUI.xml file inside it. I'm going to add this 
+customUI folder to a Word template. Because I also want to include 
+macros in this template that I'll add to the Ribbon, I saved my template
+ as a .dotm file (a macro-enabled Word 2007 template). Keep in mind that
+ you can add a custom UI using the same steps shown here to any Office 
+2007 Open XML Format Word, Excel, or PowerPoint document, template, or 
+add-in file.</div><div id="id0980070" class="ArticleNormalPara">Open the
+ Office Open XML package to which you're going to add your customUI 
+folder and drop it right in. It goes on the top level, alongside the 
+_rels, docProps, and program-specific document folder (i.e., word, xl, 
+or ppt, depending on the document type you're customizing), and the 
+[Content_Types].xml file. </div><div id="id0980071" class="ArticleNormalPara">Now
+ open the _rels folder and then open the file named .rels. (If you are 
+not using a utility that enables you to edit the file while it's in the 
+package, you may have to copy it out of the package first.) In this 
+file, you see a nested structure similar to the one in the customUI.xml 
+file. There is a set of relationships in the paired &lt;Relationships … 
+&gt; tag and a standalone tag for each relationship. Each relationship 
+tag contains three attributes: the Id, the Type, and the Target. </div><div id="id0980072" class="ArticleNormalPara">Add
+ the following tag for your customUI content to the .rels file, making 
+sure that it falls between the start and end tag for the group of 
+&lt;Relationships …&gt;:</div>
+<div id="code-snippet-4" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_45320bc6-6d63-43ec-bddb-ba2c0f737327');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_45320bc6-6d63-43ec-bddb-ba2c0f737327" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;Relationship Id="rId5" 
+Type="http://schemas.microsoft.com/office/2006/relationships/
+ui/extensibility" Target="customUI/customUI.xml"/&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980076" class="ArticleNormalPara">If the .rels file already contains a relationship tag with the ID rId5, use a different number. The ID needs to be unique.</div><div id="id0980077" class="ArticleNormalPara">After you add that information to your file, the file should look something like that shown in <strong>Figure 3</strong>. If you're using Notepad as an editor and want to view your markup with structure (as shown in <strong>Figure 3</strong>), you can open the file in Internet Explorer. </div><div class="ArticleImageSpacer"><img id="fig 05_L" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/IC320730.gif" xmlns=""><div class="ArticleImageCaptionText">Figure 3 <strong>My Edited .rels File</strong></div></div><div id="id0980078" class="ArticleNormalPara">If
+ you had to copy the .rels file out of the ZIP package to edit it, copy 
+it back in. Then open the file in Word and check out your work. The new 
+tab (named "My Custom Tab" if you used my example) appears at the end of
+ the Ribbon.</div><br><div id="id0980079" class="ArticleTypeTitle">Adding VBA Macros to the Ribbon</div><div id="id0980080" class="ArticleNormalPara">It was easy to add built-in commands to the ribbon, but what if you need to add your own tools? Here's what you do.</div><div id="id0980081" class="ArticleNormalPara">Open
+ that template file and press ALT+F11 to open the Visual Basic Editor 
+(VBE). If you have not already done so, select your template in the 
+Project Explorer that appears on the left side of the VBE. Then, on the 
+Insert menu, click Module to add a code module to your template. You can
+ then add a simple message box, as shown in <strong>Figure 4</strong>. (Of course, you can use whatever macro you want.) </div><div class="ArticleImageSpacer"><img id="fig 06_L" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/IC320732.gif" xmlns=""><div class="ArticleImageCaptionText">Figure 4 <strong>Adding a Code Module to the Template</strong></div></div><div id="id0980082" class="ArticleNormalPara">For
+ those of you with more VBA experience, and those who plan to acquire 
+it, note that there are other elements we really should add here for 
+best practices. But none of those elements are critical for the task at 
+hand (which is adding this macro to the ribbon), so I'll skip those 
+tasks for simplicity.</div><div id="id0980083" class="ArticleNormalPara">Before
+ leaving the VBE, there is one more thing to add to this macro so that 
+the Ribbon will recognize it. You have to declare it as a Ribbon 
+control. To do that, just add the following text inside the parentheses 
+that follow the procedure name:</div>
+<div id="code-snippet-5" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_1ccae4d6-21c8-4c26-a2ce-5c0fe0b584cd');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_1ccae4d6-21c8-4c26-a2ce-5c0fe0b584cd" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>ByVal Control as IRibbonControl
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980085" class="ArticleNormalPara">Now, the macro looks like this:</div>
+<div id="code-snippet-6" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_5592572f-25a4-4f28-824c-48319a6f3e02');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_5592572f-25a4-4f28-824c-48319a6f3e02" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>Sub TakeABreak(ByVal control As
+  IRibbonControl)
+MsgBox "Go get some coffee! You deserve it."
+End Sub
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980090" class="ArticleNormalPara">Note the macro name, because you need to add that to the customUI.xml file. Then, save and close the template.</div><div id="id0980091" class="ArticleNormalPara">You
+ can now add this command to your customUI.xml file by adding the 
+following markup wherever you'd like on your custom tab. I've created a 
+new group for this command, which I'm going to place after the first 
+group. </div>
+<div id="code-snippet-7" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_13ddf1f1-9cb3-431a-aba9-3e1399429005');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_13ddf1f1-9cb3-431a-aba9-3e1399429005" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;group id="customGroup2" label="Break Time" &gt;
+  &lt;button id="myBreak" visible="true"
+  size="large" label="Take a Break"
+  imageMso="HappyFace" 
+  onAction="TakeABreak" /&gt;
+&lt;/group&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980098" class="ArticleNormalPara">When you add this content,
+ be sure to add it after the end tag for the previous group and before 
+the end tag for the custom tab. Or, if you don't want to create a new 
+group, you can just add the button information in its own tag within 
+your existing group. </div><div id="id0980099" class="ArticleNormalPara">There are a few things worth noting here. </div><div id="id0980100" class="ArticleNormalPara"><ul><li>Remember that if you're creating a new group, it needs its own unique ID. I also gave this group a unique label.</li><li>My
+ new button uses a custom command, so the id attribute is used instead 
+of idMso. In addition to the attributes you know from creating the first
+ group, I've added an onAction attribute. That's the attribute I use to 
+call my macro. The value for that attribute is the macro name. </li><li>The
+ capitalization you see of any Office Open XML tag names, attribute 
+names, and built-in 2007 Office control names is usually as much a 
+requirement as any other part of the syntax.</li><li>I selected the HappyFace icon from the Icons Gallery workbook. </li></ul></div><div id="id0980104" class="ArticleNormalPara">After
+ you add your new button, update the customUI.xml file in your ZIP 
+package. There's no need to edit any other files in the package—just 
+open your template. (You will likely need to enable macros when you do 
+this.) Then go ahead and click your new button to give the macro a try. </div><br><div id="id0980105" class="ArticleTypeTitle">Getting Creative</div><div id="id0980106" class="ArticleNormalPara">Once
+ you have the basics down and have created a custom tab with built-in 
+and custom commands, you can do quite a bit more just by adding various 
+attributes. Here are some examples.</div><div id="id0980107" class="ArticleNormalPara">If
+ you want your tab to fall somewhere other than the end of the ribbon, 
+specify that in the tab's start tag, with the attribute insertBeforeMso.
+ For example, to make the tab you've just created the first tab in the 
+Ribbon, place it before the Home tab, like so:</div>
+<div id="code-snippet-8" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_e984d6b4-9471-4c61-a5d4-5775c2404cde');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_e984d6b4-9471-4c61-a5d4-5775c2404cde" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;tab id="customTab" label="My Custom Tab" 
+insertBeforeMso="TabHome"&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980110" class="ArticleNormalPara">You can find the correct name of any built-in tab in the Ribbon Control workbooks for the applicable program.</div><div id="id0980111" class="ArticleNormalPara">To
+ add a group to a built-in tab, just add the markup for that tab to your
+ customUI.xml file. It doesn't matter which tab appears first in the 
+customUI file; just be sure to nest the new markup properly. For 
+example, if you place it after your custom tab, it should fall after the
+ end tag for your custom tab and before the end tag for the group of 
+tags ( between &lt;/tab&gt; and &lt;/tabs&gt;). Here I've added the 
+Break Time group to the Insert tab:</div>
+<div id="code-snippet-9" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_c1e0e579-1ade-4a0a-9c52-699b9c66d694');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_c1e0e579-1ade-4a0a-9c52-699b9c66d694" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;tab idMso="TabInsert"&gt;
+&lt;group id="customGroup2" label="Break
+Time" insertAfterMso="GroupInsertTa
+bles" &gt;
+  &lt;button id="myBreak" visible="true"
+  size="large" label="Take a Break" 
+  imageMso="HappyFace"
+  onAction="TakeABreak" /&gt;
+&lt;/group&gt;
+&lt;/tab&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980122" class="ArticleNormalPara">If you're creating a 
+unique template with special requirements and you want to provide only 
+custom commands to the user, you may want to create an entirely custom 
+Ribbon for that template. To do this, in the start tag for the Ribbon 
+(the &lt;ribbon&gt; tag) in customUI.xml, just add the attribute 
+startFromScratch="True" as you see here.</div>
+<div id="code-snippet-10" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_87db44c4-98e7-4d38-8db8-9f45b1a79c15');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_87db44c4-98e7-4d38-8db8-9f45b1a79c15" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;ribbon startFromScratch="true"&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980124" class="ArticleNormalPara"> To add a custom command 
+other than a button, the syntax is always the same. If you want to add a
+ split button menu, for example, just keep the rules for paired tags and
+ nesting tags in mind and this customization will be very easy. Say you 
+want to put all of the commands you've added so far onto a single split 
+button menu instead of separate buttons. Try this:</div>
+<div id="code-snippet-11" class="codeSnippetContainer" xmlns="">
+    <div class="codeSnippetContainerTabs">
+        
+    </div>
+    <div class="codeSnippetContainerCodeContainer">
+        <div class="codeSnippetToolBar">
+            <div class="codeSnippetToolBarText">
+                <a name="CodeSnippetCopyLink" style="display: none;" title="Copy to clipboard." href="javascript:if%20(window.epx.codeSnippet)window.epx.codeSnippet.copyCode('CodeSnippetContainerCode_a96eb856-cc0e-49ec-b2e7-cc2f9901cf76');" ms.cmptyp="CodeSnippet">Copy</a>
+            </div>
+        </div>
+        <div id="CodeSnippetContainerCode_a96eb856-cc0e-49ec-b2e7-cc2f9901cf76" class="codeSnippetContainerCode" dir="ltr">
+            <div style="color:Black;"><pre>&lt;splitButton id="customSplit1" visible="true"
+size="large"&gt;
+  &lt;menu id="customMenu1" visible="true" &gt;
+    &lt;button id="myBreak" visible="true"
+    label="Take a Break" imageMso="HappyFace"
+    onAction="TakeABreak" /&gt;
+    &lt;button idMso="PasteSpecialDialog"
+    visible="true" imageMso="Paste" /&gt;
+    &lt;button idMso="CrossReferenceInsert"
+    visible="true" label="Insert a 
+    Cross-Reference" /&gt;
+    &lt;gallery idMso="QuickStylesGallery"
+    visible="true" /&gt;
+  &lt;/menu&gt;
+&lt;/splitButton&gt;
+
+</pre></div>
+            
+        </div>
+    </div>
+</div>
+<div id="id0980140" class="ArticleNormalPara">The result of this is shown in <strong>Figure 5</strong>.
+ Note that the first button command in the menu becomes the split button
+ default. That's why I reordered the commands for my happy face to be on
+ top. The split button has to be a button control. If Quick Styles 
+(which uses a gallery control) was first, it would have been skipped 
+over for the split button control and that control would have used the 
+first button control in the menu.</div><div class="ArticleImageSpacer"><img id="fig 08" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/IC320733.gif" xmlns=""><div class="ArticleImageCaptionText">Figure 5 <strong>A Single Split Button Menu</strong></div></div><div id="id0980141" class="ArticleNormalPara">This
+ is just a sample of what you can do to customize the UI. You can find 
+plenty of help online to take this further, like adding your own custom 
+image to a command or using a VBA macro to conditionally control the 
+behavior of some commands. Check out the <a href="https://msdn.microsoft.com/office">Office Developer Center</a> on MSDN for ideas. </div><div id="id0980142" class="ArticleNormalPara">To
+ search for help on conditionally controlling the Ribbon behavior, look 
+up attributes such as getVisible and getLabel. The 'get' prefix is used 
+before the attribute you already know when you want the Ribbon to look 
+at a macro for direction on how to behave (referred to as a callback). </div><br><div id="id0980143" class="ArticleTypeTitle">Sharing your customizations</div><div id="id0980144" class="ArticleNormalPara">You
+ can save UI customizations in any 2007 Office system Word, Excel, or 
+PowerPoint document, template, or add-in. What if you want to install 
+your custom UI so it's available regardless of the document or template 
+being used? This is also quite easy.</div><div id="id0980145" class="ArticleNormalPara">In
+ Word, just save the .dotm file that contains your macros and related 
+customUI to the Word Startup folder and it will load automatically when 
+Word starts. </div><div id="id0980146" class="ArticleNormalPara">In 
+Excel or PowerPoint, you need to save the file that contains your macros
+ and custom UI settings as an add-in, and then load that add-in. Open 
+the file in the applicable program (enable macros if prompted) and then 
+use the Save As command to save a copy as an add-in. (The add-in file 
+type for an Excel 2007 add-in is .xlam and for PowerPoint 2007 it is 
+.ppam.) When you save the file with that format, it's automatically 
+saved in the Microsoft AddIns folder. Now load it through the 
+&lt;Program&gt; AddIns dialog box, which you find via the bottom of the 
+&lt;Program&gt; Options, AddIns tab. You may be prompted to enable 
+macros the first time you load your add-in–just click Enable Macros. 
+After that, it should load automatically when the program opens.</div><br><div class="AuthorBio"><strong>Stephanie Krieger</strong> is a Microsoft Office System MVP and the author of two books, <em>Advanced Microsoft Office Documents 2007 Edition Inside Out</em> and <em>Microsoft Office Document Designer</em>. She also frequently writes, presents, and creates content for Microsoft. You can reach Stephanie through her blog, <a href="http://arouet.net/">arouet.net</a>.</div><br><div class="solidLine"></div></div>
+    </div>
+    <div class="SiteTitle">
+      <div class="navpage" xmlns="http://www.w3.org/1999/xhtml">
+        
+        <script type="text/javascript" language="javascript" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/TCDisplay.html" data-do-not-move="true">
+          
+        </script>
+        <div class="tc_namediv" id="" style="height:0;">
+          <p style="overflow:hidden;height:0px;">&nbsp;</p>
+          <script data-do-not-move="true" type="text/javascript">setTimeout(displayTC("TechNet Magazine"), 1000);</script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="libraryMemberFilter">
+    <div class="filterContainer">
+        <span>Show:</span>
+        <label>
+            <input class="libraryFilterInherited" checked="checked" value="Inherit" type="checkbox">Inherited
+        </label>
+        <label>
+            <input class="libraryFilterProtected" checked="checked" value="Protected" type="checkbox">Protected
+        </label>
+    </div>
+</div>
+    
+<input id="libraryMemberFilterEmptyWarning" value="There are no members available with your current filter settings." type="hidden">
+
+
+
+    </div>
+<div id="rightNavigationMenu" ms.cmpgrp="right nav" style="position: fixed; margin-left: 3px; top: 60px;">
+    <div id="mobileButtons">
+        
+    </div>
+    <div id="navMain">
+        <div id="closeNavigation">
+            <a class="tocCloseSmall" id="closeButton"></a>
+        </div>
+        <div id="navigationButtons">
+            <a id="isd_print" href="https://technet.microsoft.com/en-us/library/2009.05.ribbon(d=printer).aspx" rel="nofollow"><ins class="print"></ins>Print </a>
+            <a id="isdShare" href="#" role="button" aria-expanded="false">
+                <ins class="share"></ins>Share
+            </a>
+            <div id="socials" style="display: none">
+                <a class="isdFacebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2F2009.05.ribbon.aspx" aria-label="Share on Facebook">
+                    <ins class="facebook"></ins>
+                </a>
+                <a class="isdTwitter" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2F2009.05.ribbon.aspx&amp;text=A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2F2009.05.ribbon.aspx" aria-label="Share on Twitter">
+                    <ins class="twitter"></ins>
+                </a>
+                <a class="isdGooglePlus" href="https://plus.google.com/share?url=https%3A%2F%2Ftechnet.microsoft.com%2Fen-us%2Flibrary%2F2009.05.ribbon.aspx" aria-label="Share on Google+">
+                    <ins class="googlePlus"></ins>
+                </a>
+            </div>
+        </div>
+        <div id="indoc_toc" style="" ms.cmpgrp="indoc toc">
+            <div id="indoc_title">IN THIS ARTICLE</div>
+            <ul id="indoc_toclist"><li data-index="0"><a href="#Contents">Contents</a></li></ul>
+        </div>
+    </div>
+</div>
+<div id="rightNavigationMenuThumbnail" class="rightNavigationMenuThumbnail">
+</div>
+
+
+
+
+        </div>
+        <div class="clear"></div>
+
+        
+    
+
+<input name="__RequestVerificationToken" value="etoo2pnbtu9zCRbCRX7IKtEkdx0UHyKn9FOxrgIrVEX0_Ta9IqyBqge2g69PSYpdy3t4sUOKK1xut5E2mh6QLDm5sxc1" type="hidden">
+<input id="ratingValueSubmitUrl" value="https://technet.microsoft.com/en-us/library/feedback/rate/2009.05.ribbon.aspx" type="hidden">
+<input id="ratingAdditionalSubmitUrl" value="https://technet.microsoft.com/en-us/library/feedback/additional/2009.05.ribbon.aspx" type="hidden">
+<input id="isTopicRated" value="false" type="hidden">
+
+
+
+      <div id="lib-footer">
+
+
+    <div id="standardRatingBefore" class="clear stdr-container-before"></div>
+    <div id="standardRating" class="stdr-container stdr-float" ms.pgarea="body" style="width: 1136px; margin-left: 0px; display: block;">
+        <div class="stdr-close" style="display: block;"></div>
+        <div class="stdr-vote stdr-content">
+            <div class="stdr-content">
+                <span class="stdr-votetitle">Is this page helpful?</span>
+                <button class="stdr-yes" aria-label="Yes, this page was helpful">Yes</button>
+                <button class="stdr-no" aria-label="No, this page was not helpful">No</button>
+                <input id="s_ratingValue" value="" type="hidden">
+            </div>
+        </div>
+        <div class="stdr-feedback" style="display: none">
+            <div class="stdr-form">
+                <div class="stdr-fieldtitle">Additional feedback?</div>
+                <textarea class="stdr-detail" rows="6" maxlength="1500"></textarea>
+                <div>
+                    <span class="stdr-count"><span class="stdr-charcnt">1500</span> characters remaining</span>
+                    <div class="stdr-buttons">
+                        <button class="stdr-provide" aria-label="Submit my additional feedback">Submit</button>
+                        <button class="stdr-skip" aria-label="Skip additional feedback">Skip this</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="stdr-thanks" style="display: none">
+            <div class="stdr-content">
+                <span class="stdr-thankyou">Thank you!</span>
+                <span class="stdr-appreciate">We appreciate your feedback.</span>
+            </div>
+        </div>
+
+        
+        <div id="contentFeedbackQAContainer" style="display: none;"></div>
+    </div>
+    <div id="standardRatingPlaceholder" style="height: 60px;"></div>
+    
+        
+        
+    <div id="ux-footer" dir="ltr" class="ltr" role="contentinfo" ms.pgarea="footer">
+        <div class="ux-footer-clear"></div>
+        <div id="footerWrapper">
+            <div id="footerLeft">
+                <div id="footerProfileFeedback">
+                    <div id="footerProfileLink">
+                        <div data-fragmentname="ManageProfileLink" id="Fragment_ManageProfileLink" xmlns="http://www.w3.org/1999/xhtml">
+  <a href="https://social.technet.microsoft.com/profile" xmlns="http://www.w3.org/1999/xhtml">Manage Your Profile</a>
+</div>
+                    </div>
+                    <div id="Feedback">
+                        <div class="feedbackListItem">
+                            <div class="divider">|</div>
+                            
+
+
+
+
+
+<div class="FooterSiteFeedBack">
+    <a id="SiteFeedbackLinkOpener" href="javascript:void(0)">
+        <span class="FeedbackButton clip20x21" id="FeedbackButton">
+            <img id="feedBackImg" class="cl_footer_feedback_icon" src="A%20Step%20by%20Step%20Guide%20to%20Customizing%20the%20Office%202007%20Ribbon_files/ImageSprite.png" alt="Site Feedback">
+        </span>
+        Site Feedback
+    </a>
+    
+    <div id="SiteFeedbackLinkContainer" class="SiteFeedbackLinkContainer" style="display: none;">
+    <form id="siteFeedbackForm" method="post" action="https://technet.microsoft.com/en-us/library/feedback/add/2009.05.ribbon(v=technet.10).aspx">
+        <div class="SiteFeedbackLinkTitleContainer">
+            <div class="SiteFeedbackLinkTitle">
+                Site Feedback
+            </div>
+            <div class="SiteFeedbackLinkCancel">
+                <a id="SiteFeedbackLinkCloser" role="button" aria-label="Close Site Feedback" href="javascript:void(0)">x</a>
+            </div>
+        </div>
+        <div class="SiteFeedbackLinkData">
+            <div class="SiteFeedbackLinkInfoText">
+                Tell us about your experience...
+            </div>
+            <div class="QuestionText">
+                Did the page load quickly?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input aria-label="Yes" id="searchBox" name="searchBox" value="1" type="radio"></span></span>
+                
+                <span>
+                    No<span>
+                        <input aria-label="No" id="searchBox" name="searchBox" value="0" type="radio"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Do you like the page design?
+            </div>
+            <div class="AnswerText">
+                
+                <span>
+                    Yes<span>
+                        <input aria-label="Yes" id="tabbedCode" name="tabbedCode" value="1" type="radio"></span></span>
+                
+                <span>
+                    No<span>
+                        <input aria-label="No" id="tabbedCode" name="tabbedCode" value="0" type="radio"></span></span>
+                
+            </div>
+            <div class="QuestionText">
+                Tell us more
+            </div>
+            <div class="SiteFeedbackLinkTextAreaContainer">
+                <textarea id="feedbackText" data-maxlength="4000" name="feedbackText" cols="25" rows="5" class="SiteFeedbackLinkTextArea" aria-label="Feedback Text"></textarea>
+                
+                <input id="feedbackSiteName" name="feedbackSiteName" value="" type="hidden">
+                <input id="feedbackPriority" name="feedbackPriority" value="" type="hidden">
+                <input id="feedbackSourceUrl" name="feedbackSourceUrl" value="" type="hidden">
+                <input id="ClientIP" name="ClientIP" value="" type="hidden">
+                <input id="ClientOS" name="ClientOS" value="" type="hidden">
+                <input id="ClientBrowser" name="ClientBrowser" value="" type="hidden">
+                <input id="ClientTime" name="ClientTime" value="" type="hidden">
+                <input id="ClientDate" name="ClientDate" value="" type="hidden">
+                
+            </div>
+            <div>
+                <input id="siteFeedbackSubmit" value="Send" class="SiteFeedbackLinkSubmit" aria-label="Send" type="submit">
+            </div>
+        </div>
+        <input id="returnUrl" name="returnUrl" value="https://technet.microsoft.com/en-us/library/2009.05.ribbon.aspx" type="hidden">
+    <input name="__RequestVerificationToken" value="lIZq5xVXY6C_ZZxWlKTQPuVeAiZdQkdL3OW9zho2eNwjZfK3A5k8cTrpSrk9pan0zA7eMDG4Tw9-nKpf03TFYMhyXC41" type="hidden"></form>
+</div>
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="footerGroup">
+                    <div id="LinkGroup">
+                        <div id="Links1"><div data-fragmentname="FooterLinks" id="Fragment_FooterLinks" xmlns="http://www.w3.org/1999/xhtml">
+  
+  <div class="linkList">
+    <ul class="links horizontal">
+      <li>
+        <a href="https://technet.microsoft.com/cc543196.aspx" xmlns="http://www.w3.org/1999/xhtml">Flash Newsletter</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://technet.microsoft.com/cc512759.aspx" xmlns="http://www.w3.org/1999/xhtml">Contact Us</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://privacy.microsoft.com/privacystatement" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Privacy Statement</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://technet.microsoft.com/cc300389.aspx" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Terms of Use</a>
+      </li>
+      <li class="divider">|</li>
+      <li>
+        <a href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/" xmlns="http://www.w3.org/1999/xhtml" data-mscc-ic="false">Trademarks</a>
+      </li>
+      <li class="divider">|</li>
+    </ul>
+  </div>
+</div></div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <div id="Links2"></div>
+            </div>
+            <div id="footerRight">
+                <div id="FooterLogoContainer"><div id="FooterLogo"></div></div>
+                <div id="FooterCopyright">© 2018 Microsoft</div>
+            </div>
+        </div>
+    </div>
+    
+
+      </div>
+
+        <div class="footerPrintView">
+            <div class="footerCopyrightPrintView">© 2018 Microsoft</div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+
+        
+            
+
+
+
+    <input id="tocPaddingPerLevel" value="17" type="hidden">
+
+
+
+        <input id="MtpsDevice" value="Default" type="hidden">
+
+
+<!--[CDATA[ Third party scripts and code linked to or referenced from this website are licensed to you by the parties that own such code, not by Microsoft.  See ASP.NET Ajax CDN Terms of Use – http://www.asp.net/ajaxlibrary/CDN.ashx. ]]-->
+
+        
+        
+        
+            
+        
+
+<!--[CDATA[ WebTrends view model not available or IncludeLegacyWebTrendsScriptInGlobal feature flag is off]]-->
+ 
+        
+
+<div id="globalRequestVerification">
+    <input name="__RequestVerificationToken" value="lIZq5xVXY6C_ZZxWlKTQPuVeAiZdQkdL3OW9zho2eNwjZfK3A5k8cTrpSrk9pan0zA7eMDG4Tw9-nKpf03TFYMhyXC41" type="hidden">
+</div>
+
+
+    </div>
+
+    
+        
+
+    
+
+    
+<script type="text/javascript" class="mtps-injected">
+/*<![CDATA[*/
+(function(window,document){"use strict";function 
+preload(scripts){for(var 
+result=[],script,e,i=0;i<scripts.length;i++)script=scripts[i],script.hasOwnProperty("url")&&(e=document.createElement("script"),e.src=script.url,script.throwaway=e),result.push(script);return
+ result}function inject(scripts,index){var 
+script,elem;if(index>=scripts.length){delete 
+mtps.injectScripts;return}script=scripts[index];elem=document.createElement("script");elem.className="mtps-injected";elem.async=!1;var
+ 
+isLoaded=!1,timeoutId=0,injectNextFnName="",injectNext=elem.onerror=function(){isLoaded||(isLoaded=!0,inject(scripts,index+1),window.clearTimeout(timeoutId),elem.onload=elem.onerror=elem.onreadystatechange=null,injectNextFnName&&delete
+ 
+mtps[injectNextFnName],elem.removeEventListener&&elem.removeEventListener("load",injectNext,!1))};elem.addEventListener?elem.addEventListener("load",injectNext,!1):elem.readyState==="uninitialized"?elem.onreadystatechange=function(){(this.readyState==="loaded"||this.readyState==="complete")&&injectNext()}:elem.onload=injectNext;script.hasOwnProperty("url")?(timeoutId=window.setTimeout(injectNext,12e4),elem.src=script.url):(injectNextFnName="_injectNextScript_"+index,mtps[injectNextFnName]=injectNext,timeoutId=window.setTimeout(injectNext,2e3),elem.text="try
+ {\n"+script.txt+"\n} finally { MTPS."+injectNextFnName+" && 
+MTPS."+injectNextFnName+"(); }");parent.appendChild(elem)}var 
+mtps=window.MTPS||(window.MTPS={}),parent=document.getElementsByTagName("head")[0];mtps.injectScripts=function(scripts){inject(preload(scripts),0)}})(window,document);
+MTPS.injectScripts([
+
+	{ txt: "/**/\r\n(window.MTPS || (window.MTPS = {})).cdnDomains || 
+(window.MTPS.cdnDomains = { \r\n\t\"image\": 
+\"https://i-technet.sec.s-msft.com\", \r\n\t\"js\": 
+\"https://i2-technet.sec.s-msft.com\", \r\n\t\"css\": 
+\"https://i-technet.sec.s-msft.com\", \r\n\t\"ttf\": 
+\"https://i-technet.sec.s-msft.com\"\r\n});\r\n/**/" },
+	{ txt: "//\n\n        window.appInsightsId = 
+\u0027c48d7639-e2ae-45e0-b536-c9b172c95e44\u0027;\n        //" },
+	{ url: 
+"https://i2-technet.sec.s-msft.com/Combined.js?resources=0:Utilities,1:Breadcrumbs,2:LibraryRightNavigationMenu,2:PrintExportButton,3:StandardRating,4:Footer,0:Topic,1:ResponsiveSupport,1:ArchiveDisclaimer,5:JSLLRecord,0:AppInsightsPerf,1:ResponsiveToc,0:ABTestControl;/Areas/Epx/Content/Scripts:0,/Areas/Library/Content:1,/Areas/Library/Themes/Base/Content:2,/Areas/Global/Content:3,/Areas/Epx/Themes/TechNet/Content:4,/Areas/Centers/Themes/Base/Content:5\u0026amp;hashKey=1D1FACB73D91253BF02F33DDD39BA416\u0026amp;v=CD29A42089CBE86ECF392DDBAA9A3198"
+ },
+	{ url: "https://uhf.microsoft.com/mscc/statics/mscc-0.4.0.min.js" },
+	{ txt: "var omnitureTracking = \"false\";" },
+	{ url: 
+"https://i2-technet.sec.s-msft.com/Combined.js?resources=0:megabladeMenu.1,1:SearchBox;/Areas/Epx/Themes/Shared/Content:0,/Areas/Epx/Themes/Base/Content:1\u0026amp;hashKey=F6DE63F37E6BFBE8E78C84CFE28A5B67\u0026amp;v=CD29A42089CBE86ECF392DDBAA9A3198"
+ },
+	{ url: 
+"https://i1.services.social.microsoft.com/search/Widgets/SearchBox.jss?boxid=HeaderSearchTextBox\u0026btnid=HeaderSearchButton\u0026brand=TechNet\u0026loc=en-us\u0026watermark=TechNet\u0026focusOnInit=false"
+ },
+	{ url: 
+"https://i2-technet.sec.s-msft.com/Combined.js?resources=0:JumpRedirect,1:Header.2;/Areas/Epx/Themes/Base/Content:0,/Areas/Epx/Themes/TechNet/Content:1\u0026amp;hashKey=6BEF94D681BADBDC25ABE184A5312ADD\u0026amp;v=CD29A42089CBE86ECF392DDBAA9A3198"
+ },
+	{ txt: "MTPS = window.MTPS || {}; MTPS.LocalizedStrings = 
+window.MTPS.LocalizedStrings || {}; 
+MTPS.LocalizedStrings.ExpandButtonTooltip = \u0027Expand\u0027; 
+MTPS.LocalizedStrings.CollapseButtonTooltip = \u0027Collapse\u0027; 
+MTPS.LocalizedStrings.EnhancedExpandTooltip = \u0027Click to expand. 
+Double-click to expand all.\u0027; 
+MTPS.LocalizedStrings.EnhancedCollapseTooltip = \u0027Click to collapse.
+ Double-click to collapse all.\u0027; 
+MTPS.LocalizedStrings.ExpandAllButtonTooltip = \u0027Expand All\u0027; 
+MTPS.LocalizedStrings.CollapseAllButtonTooltip = \u0027Collapse 
+All\u0027;" },
+	{ url: 
+"https://i2-technet.sec.s-msft.com/Combined.js?resources=0:LibraryMemberFilter,1:SiteFeedbackLink,1:Toc_Fixed,1:CodeSnippet,1:TopicNotInScope,1:VersionSelector,1:SurveyBroker;/Areas/Library/Content:0,/Areas/Epx/Content/Scripts:1\u0026amp;hashKey=DB72A174A0119883B2C35F4D5C13FED9\u0026amp;v=CD29A42089CBE86ECF392DDBAA9A3198"
+ },
+	{ txt: "$(document).ready(function() {\n        try {\n            var 
+token = $(\"#globalRequestVerification 
+input[name=\u0027__RequestVerificationToken\u0027]\").clone();\n        
+    $(\"#siteFeedbackForm\").append(token);\n        } catch(err) {\n   
+         \n        }\n    });" }
+]);
+
+/*]]>*/
+</script>
+
+</body></html>

@@ -1,0 +1,7 @@
+Sub CompareAndMerge()
+file1 = ActiveDocument.FullName
+ActiveDocument.Close
+file2 = ActiveDocument.FullName
+ActiveDocument.Close
+Documents.Open(file1).Merge (file2)
+End Sub

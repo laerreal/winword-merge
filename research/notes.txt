@@ -1,0 +1,120 @@
+
+# Что-то (годное?) о написании своих макросов
+
+https://technet.microsoft.com/en-us/library/2009.05.ribbon.aspx
+
+# Эксперименты
+Doc1.docx*
+
+# Об использовании макросов для сравнения документов
+```
+http://www.techtalkz.com/microsoft-office-word/172251-invoking-compare-merge-command-line.html
+```
+
+# О методе Word.Document.Merge
+```
+https://msdn.microsoft.com/en-us/vba/word-vba/articles/document-merge-method-word
+```
+
+Первые три аргумента:
+
+* второй документ для сравнения
+* куда сохранить результат объединения
+* учитывать ли изменения формата
+
+# Compare
+```
+https://msdn.microsoft.com/en-us/vba/word-vba/articles/document-compare-method-word
+```
+
+# Эксперимент
+
+* Создать diffmacros.dotm
+* Открыть - Вид - Макросы - Макросы
+* Выбрать "Макросы из:" diffmacros (шаблон)
+* Ввести имя: CompareAndMerge
+* Нажать "Создать"
+* В открывшееса окно "Microsoft Visual Basic" в окно (Code) ввести:
+
+```basic
+file1 = ActiveDocument.FullName
+ActiveDocument.Close
+file2 = ActiveDocument.FullName
+ActiveDocument.Close
+Documents.Open(file1).Merge (file2)
+```
+
+  Там уже было:
+
+```basic
+Sub CompareAndMerge()
+'
+' CompareAndMerge Макрос
+'
+'
+
+End Sub
+```
+
+* Сохранить
+* Так макрос не проходит проверку безопасности
+* Нужно его создать в normal.dotm
+
+# Макрос в normal.dotm для объекдинения в конкретный файл
+
+```
+Sub CompareAndMergeTo()
+'
+' CompareAndMergeTo Макрос
+'
+'
+
+file1 = ActiveDocument.FullName
+ActiveDocument.Close
+file2 = ActiveDocument.FullName
+ActiveDocument.Close
+file3 = ActiveDocument.FullName
+ActiveDocument.Close
+
+Documents.Open(file1).Merge Name:=file2, MergeTarget:=file3, DetectFormatChanges:=True
+
+End Sub
+```
+
+# В результате
+
+```
+Sub Diff
+
+file2 = ActiveDocument.FullName
+ActiveDocument.Close
+file1 = ActiveDocument.FullName
+ActiveDocument.Close
+
+Documents.Open(file1).Merge file2, MergeTarget:=wdMergeTargetNew, DetectFormatChanges:=True
+
+End Sub
+
+Sub Merge
+
+file2 = ActiveDocument.FullName
+ActiveDocument.Close
+file1 = ActiveDocument.FullName
+ActiveDocument.Close
+
+Documents.Open(file1).Merge file2, MergeTarget:=wdMergeTargetCurrent, DetectFormatChanges:=True
+
+End Sub
+```
+
+# Lauch Excel script from file
+
+```
+https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file
+```
+
+# Launch wineord script from file
+```
+https://social.technet.microsoft.com/Forums/windowsserver/en-US/bc414266-093a-40eb-b4d5-ef545b841b08/open-word-app-and-doc-in-vbs-without-showing-command-window?forum=ITCG
+```
+
