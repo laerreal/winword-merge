@@ -18,6 +18,27 @@ This script may be used standalone (without Nautilus).
 cd /path/to/directory/managed/by/git
 winword-merge.py conflicting/document.doc
 ```
+
+## Comparison
+
+Given 2 documents the script launches MS Word document comparison.
+
+### Nautilus
+
+Select two files and use the script.
+Note that the order is significant and may be affected by selection of file
+sorting criteria (Name, Size, etc.).
+
+> File selection order is seems to do not affect the order of arguments passed
+> to the script.
+
+### Standalone
+
+```bash
+cd /path/to/a/directory/
+winword-merge.py old.doc new.doc
+```
+
 ## Debugging
 
 There is `DEBUG` variable in the script. Less value results in more prints.
