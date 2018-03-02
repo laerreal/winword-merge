@@ -37,7 +37,8 @@ def winpath(unixpath):
     return ret[:-1].decode("utf-8")
 
 if __name__ == "__main__":
-    if len(argv) < 1:
+    argc = len(argv)
+    if argc < 2:
         el("Too few argumetns")
         exit(1)
 
